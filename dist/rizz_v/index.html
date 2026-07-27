@@ -1,54 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/rizz_v/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/rizz_v/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rizz Vue - Responsive Admin Dashboard Template</title>
     <style>
-    #splash-screen {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      background: white;
-      display: flex;
-      height: 100%;
-      width: 100%;
-      transform: translate(-50%, -50%);
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      opacity: 1;
-      transition: all 15s linear;
-      overflow: hidden;
-    }
+      #splash-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: white;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        opacity: 1;
+        transition: opacity 0.7s ease, visibility 0.7s ease;
+        overflow: hidden;
+      }
 
-    #splash-screen.remove {
-      animation: fadeout 0.7s forwards;
-      z-index: 0;
-    }
-
-    @keyframes fadeout {
-      to {
+      #splash-screen.remove {
         opacity: 0;
         visibility: hidden;
+        pointer-events: none;
       }
-    }
-  </style>
-    <script type="module" crossorigin src="/rizz_v/assets/index-DY21EHF8.js"></script>
+
+      @keyframes fadeout {
+        to {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/rizz_v/assets/index-D4xZ5Myr.js"></script>
     <link rel="stylesheet" crossorigin href="/rizz_v/assets/index-Yx9D_r9t.css">
   </head>
   <body>
     <div id="app"></div>
     <div id="splash-screen">
       <img alt="Logo" src="/rizz_v/assets/logo-sm-BUdp6hNq.png" style="height: 4%" />
-      <img alt="Logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAUCAYAAAAk/dWZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDM1MiwgMjAyMC8wMS8zMC0xNTo1MDozOCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjEgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkMyMkRGRTc5Rjk0NzExRUVBNThCQjBBMURDMEE0MkExIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkMyMkRGRTdBRjk0NzExRUVBNThCQjBBMURDMEE0MkExIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzIyREZFNzdGOTQ3MTFFRUE1OEJCMEExREMwQTQyQTEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QzIyREZFNzhGOTQ3MTFFRUE1OEJCMEExREMwQTQyQTEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6Q3QlbAAAB30lEQVR42sxXTVKDUAx+0OqmG1aOS7wBRyg3aE8g3MAbFE6gNwBPYG8AN/At3bVLx426cKPjT+KEivHxflqKzUyGAZKQ770vecE7Oj6ZCiFQdVKDyrfXhyfVS4gRweUGNCTbeZftPsSDBDK4Liztr0BzniDEWBGARkqwSYcC4TvaX4BWFnaBGFBGo9GE00mC3oGuOxI6BR/v4/2l/gkyeYbLjG5xl1J4fz8YCqQT6GdLp+x9AFowm5UiToi+aC8GlrHJgPifEriG9yEH0HoWwf2mCVDRWwEDn1oRzyRy7AB4rQmcsOYQU5dCubTofptG0xFPJ7FvSTlcyUgcqPgWAHD1C0aJ5SGBUNGpgsRNfrntB4DnccfOVmx385YPnl2Zwq9i1MTzqHY9J76LHBzlDt1QBaCkxHV+BQNQNweqS2Fj4nEP40ShAJBaAEhYLnNdTWCi2CXO2HPrVmlIZqZaTY1PogDwazF9DZexpZbs8WIHAJluNTUACkbnP2zwHQs4oW7lCoD3fSM16XA1AjCC6GM3bFezY7TnPnKrsQPkmtEAdyMngDZyrphwH1VtnGqxOeUD5nPb0frNJzbNM3VftfGf/xO91MY+/+z4xKj8DeUjettOF2PLKdalncsvAQYAlazQarkDcBYAAAAASUVORK5CYII=" style="height: 3%;margin-inline-start:6px" />
+      <img alt="Logo" src="/rizz_v/assets/logo-sm-BUdp6hNq.png" style="height: 3%; margin-inline-start: 6px" />
     </div>
-    <script>
-      const rootEl = document.querySelector('#app')
-      new MutationObserver(() => {
-        document.querySelector('#splash-screen')?.classList.add('remove');
-      }).observe(rootEl, { childList: true });
-    </script>
   </body>
 </html>
